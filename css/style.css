@@ -1,0 +1,809 @@
+/* 
+0-header
+1-الرئيسة
+2-خدماتنا
+3-مموقعنا
+4-خدمة العملاء
+4-خدمة العملاء
+ */
+/* -----------------(all elemints)------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-padding: 20px 8%;
+  --body-color: #00204a;
+  --bg-color: #005792;
+  --main-color: #fdb44b;
+  --text-color: #ffffff;
+  --second-color: #3877c5;
+  --main-shadow: 0px 0px 20px 0px var(--main-color);
+}
+body {
+  font-family: "Italianno", cursive;
+  font-family: "Tajawal", sans-serif;
+  color: var(--text-color);
+  background: var(--body-color);
+}
+span {
+  color: var(--main-color);
+  font-weight: 700;
+}
+.btm {
+  display: inline-block;
+  padding: 7px 16px;
+  background-color: var(--main-color);
+  color: var(--icon-color);
+  transition: 0.5s;
+  border-radius: 30px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--bg-color);
+  border: 0.1rem solid var(--main-color);
+  font-weight: 700;
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+}
+.btm:hover {
+  box-shadow: var(--main-shadow);
+  background-color: transparent;
+  color: var(--main-color);
+}
+section,
+footer {
+  position: relative;
+  z-index: 10;
+}
+/* -----------------(1-header)------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 0 0 5%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background: transparent;
+}
+header .logo {
+  font-family: "Italianno", cursive;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--main-color);
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  position: relative;
+  background: var(--main-color);
+  padding: 0 5% 0 0;
+  z-index: 2;
+}
+nav::after {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: -6px;
+  height: 90px;
+  z-index: -1;
+  width: 40px;
+  transform: rotate(35deg);
+  background: var(--main-color);
+  z-index: -1;
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+}
+nav .home-logo {
+  display: none;
+}
+nav a {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  font-weight: 700;
+}
+nav a i {
+  color: var(--body-color);
+}
+nav .copy-right {
+  display: none;
+}
+nav .content-list {
+  display: none;
+}
+/* -----------------(2-الرئسية)------------------- */
+.bg-home {
+  width: 100%;
+  height: 700px;
+  position: sticky;
+  top: 0;
+  background: var(--body-color) url(../image/background.jpg) no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
+}
+.home {
+  position: relative;
+  top: 50px;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  /* gap: 20px; */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.content-logo {
+  background: var(--body-color);
+  box-shadow: -13px -2px 33px -25px, 20px 13px 41px -10px black,
+    1px 1px 21px -11px inset var(--main-color);
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 41% 59% 57% 43% / 49% 50% 50% 51%;
+}
+.home .home-logo {
+  height: 150px;
+  width: 180px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.home .content-logo {
+  animation: images-moving 4s infinite ease-in-out;
+  -webkit-animation: images-moving 4s infinite ease-in-out;
+}
+@keyframes images-moving {
+  50% {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+  }
+  0%,
+  100% {
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+  }
+}
+.conent-text-home h4 {
+  width: 52vw;
+  max-width: 500px;
+  min-width: 250px;
+  font-size: 2vw;
+  margin: 20px 0 10px;
+  border: 0.01px solid var(--main-color);
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 15px -3px black, 1px 1px 15px -3px var(--main-color);
+  padding: 5px 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.conent-text-home {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.conent-text-home h1 {
+  color: var(--main-color);
+  align-self: flex-start;
+}
+.social-media {
+  align-self: flex-start;
+}
+.social-media a {
+  color: var(--main-color);
+  border-radius: 50%;
+  border: 0.1rem solid var(--main-color);
+  padding: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
+  margin: 7px 0 0;
+  transition: 0.5s;
+}
+.social-media a:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: var(--main-shadow);
+}
+.conent-text-home .btm {
+  align-self: flex-start;
+}
+
+/* -----------------(2-خدماتنا)------------------- */
+.services {
+  width: 100%;
+  margin-top: 100px;
+  background: var(--body-color);
+  padding: 5px 5% 20px;
+}
+.heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 40px auto;
+  position: relative;
+  width: 300px;
+}
+.heading::after,
+.heading::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.heading::before {
+  left: 0;
+}
+.services h4 {
+  text-align: center;
+  color: var(--main-color);
+  margin: 10px 0;
+  border-bottom: 4px double;
+  border-radius: 20px;
+}
+.cont-services {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 100px 0;
+}
+.cont-services h4 {
+  border: none;
+}
+.serv1 {
+  overflow: hidden;
+  position: relative;
+  height: 190px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+  border-radius: 61% 39% 52% 48% / 44% 58% 42% 56%;
+  -webkit-border-radius: 61% 39% 52% 48% / 44% 58% 42% 56%;
+  -moz-border-radius: 61% 39% 52% 48% / 44% 58% 42% 56%;
+  -ms-border-radius: 61% 39% 52% 48% / 44% 58% 42% 56%;
+  -o-border-radius: 61% 39% 52% 48% / 44% 58% 42% 56%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  box-shadow: inset 20px 8px 21px -21px rgb(129 129 129 / 16%),
+    5px 6px 20px rgb(0 0 0 / 42%), -1px 20px 30px rgb(0 0 0 / 51%),
+    inset -12px -12px 34px -28px rgb(255 255 255), -1px 1px 46px -37px #141414ed;
+}
+.serv1:hover {
+  border-radius: 50%;
+}
+.serv1::before {
+  content: "";
+  position: absolute;
+  top: 38%;
+  left: 17px;
+  width: 10px;
+  height: 10px;
+  background: #ffffff45;
+  border-radius: 50%;
+}
+.serv1::after {
+  content: "";
+  position: absolute;
+  top: 26%;
+  left: 13px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff3b;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.serv1 img {
+  width: 100px;
+  height: 90px;
+  background: var(--main-color);
+  border-radius: 41% 59% 57% 43% / 49% 50% 50% 51%;
+}
+
+.serv1 .cont-i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+.serv1 .cont-i i {
+  display: inline-block;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.serv1 .cont-i-sun {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.serv1 .cont-i-sun i {
+  font-size: 35px;
+  color: var(--main-color);
+}
+.serv1 .discription {
+  text-align: center;
+}
+.for-more {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 40px 0;
+  border-top: 1px solid var(--main-color);
+  padding-top: 10px;
+}
+.for-more .social-media {
+  align-self: flex-start;
+}
+/* -----------------(3-مموقعنا)------------------- */
+.location {
+  width: 100%;
+  background: var(--bg-color);
+  padding: 5px 5% 20px;
+}
+.location h4 {
+  text-align: center;
+  color: var(--main-color);
+  margin: 10px 0;
+  border-bottom: 4px double;
+  border-radius: 20px;
+}
+/* compass */
+.compass {
+  margin: 30px 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pl {
+  display: block;
+  width: 9.375em;
+  height: 9.375em;
+}
+.pl__arrows,
+.pl__ring-rotate,
+.pl__ring-stroke,
+.pl__tick {
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.pl__arrows {
+  animation-name: arrows42;
+  transform: rotate(45deg);
+  transform-origin: 16px 52px;
+}
+.pl__ring-rotate,
+.pl__ring-stroke {
+  transform-origin: 80px 80px;
+}
+.pl__ring-rotate {
+  animation-name: ringRotate42;
+}
+.pl__ring-stroke {
+  animation-name: ringStroke42;
+  transform: rotate(-45deg);
+}
+.pl__tick {
+  animation-name: tick42;
+}
+.pl__tick:nth-child(2) {
+  animation-delay: -1.75s;
+}
+.pl__tick:nth-child(3) {
+  animation-delay: -1.5s;
+}
+.pl__tick:nth-child(4) {
+  animation-delay: -1.25s;
+}
+.pl__tick:nth-child(5) {
+  animation-delay: -1s;
+}
+.pl__tick:nth-child(6) {
+  animation-delay: -0.75s;
+}
+.pl__tick:nth-child(7) {
+  animation-delay: -0.5s;
+}
+.pl__tick:nth-child(8) {
+  animation-delay: -0.25s;
+}
+/* Animations */
+@keyframes arrows42 {
+  from {
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes ringRotate42 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes ringStroke42 {
+  from,
+  to {
+    stroke-dashoffset: 452;
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    stroke-dashoffset: 169.5;
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes tick42 {
+  from,
+  3%,
+  47%,
+  to {
+    stroke-dashoffset: -12;
+  }
+
+  14%,
+  36% {
+    stroke-dashoffset: 0;
+  }
+}
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  color: var(--main-color);
+  font-size: 25px;
+}
+/* -----------------(4- فترات الدوام )------------------- */
+.working-time {
+  background: var(--body-color);
+
+  padding: 10px 0;
+}
+.working-time .heading::before {
+  left: 0;
+  width: 63px;
+}
+.working-time .title-work {
+  text-align: center;
+  color: var(--main-color);
+  margin: 60px auto;
+  width: 90%;
+  border-bottom: 4px double;
+  border-radius: 20px;
+}
+.working-time .heading::after,
+.Working-time .heading::before {
+  width: 63px;
+}
+.cont-work {
+  max-width: 700px;
+  position: relative;
+  margin-top: 30px;
+  width: 90%;
+  margin: auto;
+  padding: 20px 30px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: inset 20px 8px 21px -21px rgb(129 129 129 / 16%),
+    5px 6px 20px rgb(0 0 0 / 42%), -1px 20px 30px rgb(0 0 0 / 51%),
+    inset -12px -12px 34px -28px rgb(255 255 255), -1px 1px 46px -37px #141414ed;
+}
+.cont-work::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  height: 93%;
+  width: 4px;
+  border-radius: 20px;
+  background: var(--main-color);
+}
+.arr {
+  position: absolute;
+  right: 13px;
+  top: 24px;
+}
+.arr2 {
+  top: 164px;
+}
+.day {
+  height: 50%;
+}
+.week {
+  height: 50%;
+}
+
+.working-time .for-more {
+  margin: 50px 5% 20px;
+}
+.working-time .i {
+  align-self: center;
+  font-size: 20px;
+}
+/* -----------------(4-خدمة العملاء)------------------- */
+.customers {
+  width: 100%;
+  background: var(--bg-color);
+  padding: 15px 5%;
+}
+.customers .heading::after,
+.customers .heading::before {
+  width: 60px;
+}
+.cont-customers {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.customers h4 {
+  text-align: center;
+  color: var(--main-color);
+  margin: 60px 0;
+  border-bottom: 4px double;
+  border-radius: 20px;
+}
+.customers h5 {
+  margin-top: 10px;
+}
+/* -----------------(end about me)------------------- */
+.about {
+  position: relative;
+  padding: 5px;
+  background: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .btm {
+  align-items: center;
+  display: block;
+  text-align: center;
+}
+/* -----------------(5-footer)------------------- */
+footer {
+  border-bottom: 1px solid var(--main-color);
+}
+.cont-footer {
+  background: var(--body-color);
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 1rem 9%;
+  align-items: center;
+}
+footer p {
+  display: inline;
+  text-align: center;
+}
+.cont-footer i {
+  background-color: var(--main-color);
+  font-size: 20px;
+  color: black;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+/* -----------------{responsive}------------------- */
+
+@media (max-width: 600px) {
+  header {
+    overflow: visible;
+  }
+  .conent-text-home h4 {
+    font-size: 14px;
+    width: auto;
+    max-width: auto;
+    min-width: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: start;
+    align-content: flex-start;
+    width: 50%;
+    height: 100%;
+    gap: 40px;
+    padding-top: 0px;
+    border-bottom-left-radius: 20px;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    transition: 1s;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+  }
+  nav .home-logo {
+    display: block;
+    height: 100px;
+    width: 130px;
+    margin-right: 15px;
+    margin-top: -20px;
+    padding-bottom: 5px;
+    border-bottom: 3px double var(--body-color);
+    border-radius: 20px;
+  }
+  .open-nav {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+  nav::after {
+    display: none;
+  }
+  nav .content-list {
+    display: block;
+  }
+  nav a {
+    flex-direction: row;
+    gap: 5px;
+  }
+  .open-list,
+  .close-list {
+    font-size: 25px;
+    color: var(--body-color);
+    position: absolute;
+    top: -1px;
+    left: -53px;
+    background-color: var(--main-color);
+    padding: 13px;
+    padding-right: 20%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    cursor: pointer;
+  }
+
+  .open-list {
+    z-index: 99;
+  }
+  .close-list {
+    z-index: -99;
+  }
+  nav .copy-right {
+    display: block;
+    font-weight: 600;
+    border-top: 1px solid;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .content-logo {
+    width: 170px;
+    height: 170px;
+  }
+  .home .home-logo {
+    height: 130px;
+    width: 160px;
+  }
+  /* -----------------(4- فترات الدوام )------------------- */
+
+  /* -------------------(footer)-------------- */
+  .cont-footer {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  footer {
+    border-bottom: 1px solid var(--main-color);
+  }
+}
+
+@media (max-width: 344px) {
+  .heading {
+    margin: 40px 20px;
+    width: auto;
+    border-bottom: 1px solid var(--main-color);
+  }
+  .heading::after,
+  .heading::before {
+    content: "";
+    width: 0;
+    height: 0;
+  }
+  nav {
+    padding: 0 3% 0 0;
+  }
+  nav a {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  nav a i {
+    align-self: flex-end;
+  }
+  nav .home-logo {
+    height: 90px;
+    width: 110px;
+    margin-right: 0;
+  }
+}
