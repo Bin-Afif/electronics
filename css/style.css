@@ -166,6 +166,7 @@ nav .content-list {
 .home .home-logo {
   height: 150px;
   width: 180px;
+  margin: 0 0 10px;
   position: absolute;
   left: 50%;
   top: 45%;
