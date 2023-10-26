@@ -53,11 +53,16 @@ ScrollReveal({
   duration: 2000,
   delay: 200
 });
-ScrollReveal().reveal(".conent-text-home h1", {
-  origin: `right`
-});
-ScrollReveal().reveal(".conent-text-home h3", {
+
+ScrollReveal().reveal(".conent-text-home h1,.conent-text-home h3", {
   origin: `left`
+});
+
+ScrollReveal().reveal(".conent-text-home h1 , .conent-text-home h3", {
+  origin: `left`
+});
+ScrollReveal().reveal(".customers .for-more span,.heading", {
+  origin: `top`
 });
 /*================ typed js =========================== */
 
